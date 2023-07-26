@@ -303,7 +303,7 @@ header {
 
 /* HOME */
 .main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(formsbg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(../Landing/formsbg.jpg);
     height: 800px;
     width: 100%;
     background-size: cover;
@@ -340,7 +340,7 @@ section#Home {
     line-height: 50px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    background-image: url(back.png);
+    background-image: url(../Landing/back.png);
     -webkit-background-clip: text;
     background-clip: text;
     background-position: 0 0;
@@ -609,7 +609,7 @@ section#quote {
 
 .forms {
     background-color: #8b4040;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(handshake.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(../Landing/handshake.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -821,7 +821,7 @@ input#submit:hover {
     height: 500px;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent), url(th.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent), url(../Landing/th.jpg);
     margin: 20px auto 0 auto;
     background-attachment: fixed;
 
