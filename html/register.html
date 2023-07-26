@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Ludiflex | Login & Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <!-- <div class="nav-logo">
+            <p>LOGO .</p>
+        </div> -->
+        <div class="logo">
+            <!-- <h1 class="h1">Lksok&'kfDr</h1>
+            <h3 class="h3">SEVA-SHAKTI</h3> -->
+            <img class="imgx" src="../image/seva-shakti.png">
+        </div>
+        <!-- <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Blog</a></li>
+                <li><a href="#" class="link">Services</a></li>
+                <li><a href="#" class="link">About</a></li>
+            </ul>
+        </div> -->
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Seeker</button>
+            <button class="btn" id="registerBtn" onclick="register()">Provider</button>
+            <button class="btn" id="seekerBtn" onclick="seeker()">NGO</button>
+        </div>
+        <!-- <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div> -->
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <header>Seeker</header>
+            </div>
+
+            
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="date" class="input-field" placeholder="Age">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="Mobile Number" max="10">
+                <i class="bx bx-mobile"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="Aadhar Number" max="12">
+                <i class="bx bx-card"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box" id="Profile-Photo">
+                <!-- <i class="bx bx-user"></i> -->
+                <label class="header-profile-photo">Profile Photo:</label>
+                <input id="image" type="file" name="profile_photo" placeholder="Profile-Photo" class="input-fieldx" required="Profile-Photo" id="Profile_photo" capture="Profile-Photo">               
+            </div>
+            <br>
+            <div class="input-box">
+                <a href="../html/seeker.html"><input type="submit" class="submit" value="Register"></a> 
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <span>Don't have an account? <a href="../html/signup.html">Sign Up</a></span>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+
+            
+
+            <div class="top">
+                <header>Provider</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <!-- <input type="text" class="input-field" placeholder="Service Type"> -->
+                    <select name="Service Type" class="input-field" placeholder="Service Type">
+                        <option value="Shelter">Shelter</option>
+                        <option value="Shelter">Food</option>
+                        <option value="Shelter">Spa</option>
+                        <option value="Shelter">Washrooms</option>
+                        <option value="Shelter">Other Services</option>
+                    </select>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" id="provider-name" placeholder="Name">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Address">
+                <i class="bx bx-home"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="Mobile Number" max="10">
+                <i class="bx bx-mobile"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="Aadhar Number" max="12">
+                <i class="bx bx-card"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box" id="Profile-Photo">
+                <!-- <i class="bx bx-user"></i> -->
+                <label class="header-profile-photo">Profile Photo:</label>
+                <input id="image" type="file" name="profile_photo" placeholder="Profile-Photo" class="input-fieldx" required="Profile-Photo" id="Profile_photo" capture="Profile-Photo">               
+            </div><br>
+            <div class="input-box">
+                <a href="../html/provider.html"><input type="submit" class="submit" value="Register"></a> 
+                <!-- <input type="submit" class="submit" value="Register"> -->
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <span>Don't have an account? <a href="../html/signup.html">Sign Up</a></span>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- NGO form -->
+
+        <div class="seeker-container" id="seeker">
+            <div class="top">
+                <!-- <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span> -->
+                <header>NGO</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="NGO Name">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Office Address">
+                <i class="bx bx-building"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="NGO Darpan ID" max="12">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="FCRA Registration Number" max="12">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field" placeholder="contact Number" max="12">
+                <i class="bx bx-mobile"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <a href="../html/ngo.html"><input type="submit" class="submit" value="Register"></a> 
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <span>Don't have an account? <a href="../html/signup.html">Sign Up</a></span>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>   
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var c = document.getElementById("seekerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("seeker");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        c.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+        z.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        c.className = "btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+        z.style.opacity = 0;
+    }
+
+    function seeker() {
+        x.style.left = "-522px";
+        y.style.right = "-510px";
+        z.style.right = "12px"
+        a.className = "  btn";
+        b.className = "   btn";
+        c.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 0;
+        z.style.opacity = 1;
+    }
+
+</script>
+
+</body>
+</html>

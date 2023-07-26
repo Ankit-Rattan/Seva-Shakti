@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reached</title>
+  <style>
+    body{
+        
+        background-image: linear-gradient(rgba(209, 209, 209, 0.475), transparent), url("../reached/social-bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+    /* @font-face {
+      font-family: hindi;
+      src: url(krutidev-010-hindi-font-download.ttf);
+  } */
+  .logo{
+    padding: 2px;
+    margin-left: 20px;
+    justify-content: left;
+    text-align: left;
+  }
+  
+    /* Styles for the modal overlay */
+    .modal-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:rgb(176, 176, 166);
+      visibility: visible;
+      opacity: 1;    
+      transition: opacity 0.3s;
+    }
+
+
+    /* Styles for the modal content */
+    .modal-content {
+      background-color: rgba(255, 255, 255, 0.365);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(0, 0, 0);
+    }
+    
+    /* Styles for the button below the modal */
+    .modal-overlay button {
+      
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      background-color: black;
+      color: white;
+    }
+    
+    #text-comment{
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+
+    }
+    
+    .button{
+        text-decoration: none;
+        margin: auto;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        background-color: white;
+        color: black;        
+    }
+    
+    .provider-link{
+        display: flex;
+        justify-content: center;
+    }
+    #rating-st{
+      border-radius: 4px;
+    }
+    .rate{
+      font-weight: bolder;
+        color:black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .rate .button:hover{
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+        transition-duration: .5s;
+        
+    }
+
+    .stars-container {
+        background-color: white;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 0; /* Remove default space between inline-block elements */
+    }
+    
+    /* Styles for the star icon */
+      .star {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          margin: 2px;
+          background-color: transparent;
+          background-size: cover;
+          cursor: pointer;
+        }
+        
+        /* Style for the hovered and selected stars */
+        .star:hover,
+        .star.selected {
+            background-color: white;
+            border-radius: 2px;
+            background-image: url("https://th.bing.com/th/id/R.9b0f52ad060ca747a4643c99444b7392?rik=Gu8MwQUiUuJNIw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fstar-png-star-vector-png-transparent-image-2000.png&ehk=tPTpccZ5Svh8XPduqc60tWiDArcQil6wZBZgi%2bsePdA%3d&risl=&pid=ImgRaw&r=0"); /* Replace with the path to your star icon */
+        }
+        .provider-link .button:hover{
+            
+            transition-duration: .5s;
+            background-color: black;
+            color: white;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+        }
+        .whole{
+          border: 1px white solid;
+          border-radius: 2px;
+          background-color: rgba(240, 248, 255, 0.445);
+          max-width:500px;
+          margin: auto;
+        }
+  </style>
+</head>
+<body>
+  <!-- Modal overlay -->
+  <div class="main">
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-content">
+        <h2>You have Successfully Reached</h2>
+        <p>Do Rate the provider for the authentication</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  <div class="logo">
+    <img src="../image/seva-shakti.png" alt="">
+  </div>  
+  <div class="whole">
+
+    <div class="rate">
+      <p>Rate the Provider</p>
+    <!-- Stars -->
+    <div id="rating-st" class="stars-container">
+      <div class="star" onclick="setRating(1)"></div>
+      <div class="star" onclick="setRating(2)"></div>
+      <div class="star" onclick="setRating(3)"></div>
+      <div class="star" onclick="setRating(4)"></div>
+      <div class="star" onclick="setRating(5)"></div>
+    </div>    
+    <br>
+    <textarea name="" id="text-comment" cols="30" rows="10">Comments if Any</textarea>
+    <br>
+    <a href="" target="_blank" class="button">Submit </a>
+  </div>
+  <br><br>
+  <div class="provider-link">
+    
+    <a href="../html/provider2.html" target="_blank" class="button">Provider Profile</a>
+  </div>
+  
+</div>
+  
+</div>
+  <script>
+    // Function to close the modal
+    function closeModal() {
+      var modal = document.getElementById('modalOverlay');
+      modal.style.opacity = '0';
+      setTimeout(function() {
+        modal.style.visibility = 'hidden';
+      }, 300); // Delay the hiding of the modal for a smoother transition
+    }
+    
+    // Close the modal automatically after a certain delay (e.g., 5 seconds)
+    setTimeout(function() {
+      closeModal();
+    }, 5000); // Change the value to set the desired delay in milliseconds
+    let selectedRating = 0;
+    
+    // Function to set the rating when a star is clicked
+    function setRating(rating) {
+      selectedRating = rating;
+      highlightStars();
+    }
+
+    // Function to highlight the stars based on the selected rating
+    function highlightStars() {
+      const stars = document.querySelectorAll('.star');
+      stars.forEach((star, index) => {
+        if (index < selectedRating) {
+          star.classList.add('selected');
+        } else {
+          star.classList.remove('selected');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

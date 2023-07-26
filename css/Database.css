@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    height: 100px;
+    display: flex;
+  }
+
+  
+  .navbar h1 {
+    margin: auto;
+    
+    font-size: 20px;
+    padding: 10px;
+  }
+  .back-btn a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .menu-btn {
+    display: none;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .back-btn {
+    /* display: flex; */
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: auto;
+    margin-top: auto;
+    cursor: pointer;
+  }
+ 
+  
+  /* Media query for responsive design */
+  @media screen and (max-width: 600px) {
+    .menu-btn {
+      display: block;
+    }
+  
+    .container .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .container {
+      margin-top: 100px;
+    }
+  
+    .hotel {
+      width: 100%;
+    }
+  }
+  
+  .container {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  
+  .hotel {
+    
+    margin: 40px auto 40px auto;
+    height: 450px;
+    width: 1000px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* margin: 20px; */
+    /* position: relative; */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hotel:hover {
+    transform: scale(1.05); /* Increase the size on hover */
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 4vh;
+  }
+  .hover-content p{
+    color: #f0f0f0;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 4vh;
+    padding-left: 10px;
+  }
+  .hover-content {
+    display: none;
+    height: 50px;
+    background-color: #494747;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    opacity: 0.9;
+    transform: translateY(100%); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hotel:hover .hover-content {
+    transform: translateY(0); /* Slide up the hover content on hover */
+    display: flex;
+
+  }
+
+  .reviews{
+    color: #f9d71c;
+    text-align: right;
+    margin-right: 20px;
+}
+.name{
+   display: flex;
+   position: relative;
+}
+.name h2{
+  text-align: center;
+  justify-content: center;
+  margin: 10px auto 10px auto;
+}
+.name .fa-solid {
+  justify-content: center;
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 10px;
+  color: #0cdc19;
+}
+.name .fa-circle-exclamation{
+  justify-content: center;
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 10px;
+  color: #f22408;
+}
+.service{
+  display: flex;
+  text-align: left;
+  justify-content: left;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  padding: 5px;
+  margin: 50px auto 0 auto;
+  background-color: black;
+  /* height: 500px;    */
+}
+
+.copy-img {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-left: 5px;
+
+}
+
+.copy-right {
+  display: flex;
+  color: white;
+  margin: auto;
+}
+
+#copy-text {
+  font-size: small;
+  color: white;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: white;
+}
+
+.social-contact {
+  display: flex;
+  margin: auto;
+  color: white;
+}
+
+#social-lg {
+  padding: 5px;
+}
+
+.gmail {
+  color: white;
+}
+
+.yt {
+  color: white;
+}
+
+.fb {
+  color: white;
+}
+
+.twi {
+  color: white;
+}
+
+.gmail:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  color: #8b4040;
+}
+
+.yt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  color: #f00;
+}
+
+.fb:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  color: blue;
+}
+
+.twi:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  color: skyblue;
+}
+
+#text-link {
+  font-weight: bold;
+  color: white;
+}
+
+.quick-Link {
+  padding: 10px;
+  margin-right: 20px;
+  /* line-height: 40px; */
+
+}
+
+.quick-Link ul li a {
+  list-style: circle;
+  color: white;
+}
+
+.quick-Link ul li a:hover {
+  list-style: circle;
+  color: #7fc142;
+}
+
+.logo .footer {
+  color: #7fc142;
+  text-align: center;
+  justify-content: center;
+  padding-left: 0rem;
+}
+
+.logo .h1 {
+  font-family: hindi;
+  color: white;
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin: 0%;
+  font-size: 60px;
+  justify-content: center;
+  text-align: center;
+}
+
+@font-face {
+  font-family: hindi;
+  src: url(../krutidev-010-hindi-font-download.ttf);
+}
+
+.logo .h3{
+  margin: 0px;
+}
